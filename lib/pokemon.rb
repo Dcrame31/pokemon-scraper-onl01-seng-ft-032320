@@ -10,7 +10,9 @@ class Pokemon
   end
   
   def self.save
-    if self.id
+    sql = <<-SQL
+    INSERT INTO 
+    SQL
   end
   
   def self.find
