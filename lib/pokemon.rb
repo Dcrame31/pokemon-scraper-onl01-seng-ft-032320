@@ -8,4 +8,11 @@ class Pokemon
     @type = type
     @db = db
   end
+  
+  def self.save
+    if self.id
+  end
+  
+  def self.find
+  end
 end
