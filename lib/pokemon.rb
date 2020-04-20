@@ -11,9 +11,13 @@ class Pokemon
   
   def self.save
     sql = <<-SQL
-    INSERT INTO pokemon (id, name, type, db)
-    VALUES ()
+    INSERT INTO pokemon (name, type, db)
+    VALUES (?, ?, ?)
     SQL
+    
+    DB[:conn].execute(sql, self.name, self.type, self.db)
+    
+    @id = DB[:conn].execute()
   end
   
   def self.find
